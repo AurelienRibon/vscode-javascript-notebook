@@ -1,0 +1,40 @@
+{
+  "name": "javascript-notebook",
+  "displayName": "Javascript Notebook",
+  "description": "Execute an interactive Javascript notebook anywhere anytime!",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.51.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:javascript-notebook.runNotebook"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "javascript-notebook.runNotebook",
+        "title": "Run Current File As A Javascript Notebook"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc",
+    "watch": "tsc -watch",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.51.0",
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "typescript": "^4.0.2"
+  }
+}
